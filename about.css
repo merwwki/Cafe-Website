@@ -1,0 +1,110 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom, #171310, #1f1a17);
+    color: #ffffff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #171310;
+  
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f5e6cc; 
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: #f5e6cc; 
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.search-bar input {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #3e3e3e;
+    color: #f5e6cc;
+}
+
+
+main {
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.about-section, .offer-section, .location-section, .contact-section {
+    margin: 40px 0; 
+}
+
+.about-section h2, .offer-section h2, .location-section h2, .contact-section h2 {
+    color: burlywood;
+}
+
+h1, h2 {
+    color: white; 
+    margin-bottom: 10px; 
+    font-size: 30px;
+}
+
+.about-section p, .offer-section p, .location-section p {
+    color: #bbbbbb; 
+    margin-bottom: 15px;
+
+}
+
+.map-container img {
+    width: 100%; 
+    max-width: 600px; 
+    border: 2px solid #ffbf00; 
+}
+
+.contact-section ul {
+    list-style: none;
+}
+
+.contact-section ul li {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.contact-section ul li i {
+    margin-right: 10px;
+    color: white; 
+    font-size: 20px;
+}
+
+.btn-contact-details {
+    text-decoration: none;
+    color: burlywood;
+    font-style: italic;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+  }
+  
+.btn-contact-details:hover {
+    transform: translateY(-4px);
+  }
+
+footer {
+    background-color: #171310; 
+    text-align: center;
+    padding: 10px;
+    color: #ffffff;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozy Cafe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+    
+</head>
+<body>
+    <header class="header">
+        <div class="logo"> <img src="img/logo.png"></div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">All Products</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+            </div>
+        </section>
+
+        <section class="product-section" id="products">
+            <h2>Top Products</h2>
+            <div class="product-grid">
+               
+                <div class="product-item">
+                    <img src="img/biscoff.jpg" alt="Biscoff">
+                    <h3>Biscoff</h3>
+                    <p class="ingredients">Biscoff With Full Cream Milk</p>
+                    <p class="price">₱170.00</p>
+                    <div class="product-rating">
+                        ★★★★★
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <img src="img/dirty matcha.jpg" alt="Dirty Matcha">
+                    <h3>Dirty Matcha</h3>
+                    <p class="ingredients">Matcha Latte With Espresso On Top</p>
+                    <p class="price">₱170.00</p>
+                    <div class="product-rating">
+                        ★★★★★
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <img src="img/DIRTY OATCHATA.jpg" alt="Dirty Oatchata">
+                    <h3>Dirty Oatchata</h3>
+                    <p class="ingredients">Oatmilk With Notes Of Cinnamon And Rice Milk With Expresso</p>
+                    <p class="price">₱190.00</p>
+                    <div class="product-rating">
+                        ★★★★★
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <img src="img/matcha horchata.jpg" alt="Matcha Horchata">
+                    <h3>Matcha Horchata</h3>
+                    <p class="ingredients">Combines Creamy And Cinnamon Flavors Of Horchata With Notes Of Matcha</p>
+                    <p class="price">₱180.00</p>
+                    <div class="product-rating">
+                        ★★★★★
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <img src="img/oatly latte.jpg" alt="Oatly Latte">
+                    <h3>Oatly Latte</h3>
+                    <p class="ingredients">Espresso With Oat Milk And Sweetener</p>
+                    <p class="price">₱160.00</p>
+                    <div class="product-rating">
+                        ★★★★★
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <img src="img/sea salt latte.jpg" alt="Sea Salt Latte">
+                    <h3>Sea Salt Latte</h3>
+                    <p class="ingredients">Sea Salt Coffee With Foam On Top</p>
+                    <p class="price">₱140.00</p>
+                    <div class="product-rating">
+                        ★★★★★
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <img src="img/butterfly pea fizzle.jpg" alt="Butterfly Pea Fizzle">
+                    <h3>Butterfly Pea Fizzle</h3>
+                    <p class="ingredients">Fizzy Lemonade Topped With Butterfly Pea Tea</p>
+                    <p class="price">₱160.00</p>
+                    <div class="product-rating">
+                        ★★★★★
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <img src="img/oatchata.jpg" alt="Oatchata">
+                    <h3>Oatchata</h3>
+                    <p class="ingredients">Oatmilk With Notes Of Cinnamon And Rice Milk</p>
+                    <p class="price">₱170.00</p>
+                    <div class="product-rating">
+                        ★★★★★
+                    </div>
+                </div>
+
+            </div>
+            <a href="products.html" class="see-all-link">See All</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Coffee Shop. All rights reserved.</p>
+    </footer>
+
+    <script>
+
+        document.querySelector('.search-bar input').addEventListener('input', function () {
+            const searchTerm = this.value.toLowerCase();
+            const products = document.querySelectorAll('.product-item');
+        
+            products.forEach(product => {
+                const productName = product.querySelector('h3').textContent.toLowerCase();
+                if (productName.includes(searchTerm)) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        });
+        </script>
+</body>
+</html>

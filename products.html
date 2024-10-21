@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Cozy Cafe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="products.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo"> <img src="img/logo.png"></div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#products">All Products</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+    </header>
+  <main>
+    <section class="product-category">
+      <h2>Coffee Based</h2>
+      <div class="product-grid">
+        <div class="product">
+          <img src="img/DIRTY OATCHATA.jpg">
+          <h3>Dirty Oatchata</h3>
+          <p class="ingredients">Oatmilk With Notes Of Cinnamon And Rice Milk With Expresso</p>
+          <p class="price">₱190.00</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+
+            <div class="product">
+              <img src="img/spanish latte.jpg">
+              <h3>Spanish Latte</h3>
+              <p class="ingredients">Espresso With Sweetened Milk, Topped With Cinnamon</p>
+              <p class="price">₱135.00</p>
+              <p class="stars">★★★★☆</p>
+            </div>
+
+            <div class="product">
+                <img src="img/caramel macchiato.jpg">
+                <h3>Caramel Machiatto</h3>
+                <p class="ingredients">Caramel Sauce, Espresso Shot, And Full Cream Milk</p>
+                <p class="price">₱130.00</p>
+                <p class="stars">★★★★☆</p>
+            </div>
+
+            <div class="product">
+              <img src="img/cafe latte.jpg">
+              <h3>Cafe Latte</h3>
+              <p class="ingredients">Espresso And Steamed Milk</p>
+              <p class="price">₱110.00</p>
+              <p class="stars">★★★★☆</p>
+          </div>
+      </div>
+    </section>
+
+    <section class="product-category">
+      <h2>Non-Coffee</h2>
+      <div class="product-grid">
+        <div class="product">
+          <img src="img/iced matcha latte.jpg">
+          <h3>Iced Matcha Latte</h3>
+          <p class="ingredients">Matcha Drink With Full Cream Milk</p>
+          <p class="price">₱140.00</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+
+        <div class="product">
+            <img src="img/strawberry matcha.jpg" class="strawberry-matcha">
+            <h3>Strawberry Matcha</h3>
+            <p class="ingredients">Sweetened Matcha With Strawberry Puree</p>
+            <p class="price">₱180.00</p>
+            <p class="stars">★★★★☆</p>
+        </div>
+
+        <div class="product">
+            <img src="img/biscoff.jpg">
+            <h3>Biscoff</h3>
+            <p class="ingredients">Biscoff With Full Cream Milk</p>
+            <p class="price">₱170.00</p>
+            <p class="stars">★★★★☆</p>
+          </div>
+
+        <div class="product">
+            <img src="img/WHITE CHOCOLATE MOCHA.jpg">
+            <h3>White Chocolate Mocha</h3>
+            <p class="ingredients">White Chocolate Sauce, Espresso, And Full Cream Milk</p>
+            <p class="price">₱140.00</p>
+            <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-category">
+      <h2>Appetizers</h2>
+      <div class="product-grid">
+        <div class="product">
+          <img src="img/dirty fries.jpg">
+          <h3>Dirty Fries</h3>
+          <p class="ingredients">Potato Fries Tossed In Paprika, Melted Cheese, Bacon Bits And Beef</p>
+          <p class="price">₱180.00</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+
+        <div class="product">
+            <img src="img/chicken fingers.jpg">
+            <h3>Chicken Fingers</h3>
+            <p class="ingredients">Crispy Chicken Tenders Served With Dipping Sauce</p>
+            <p class="price">₱220.00</p>
+            <p class="stars">★★★★☆</p>
+        </div>
+
+        <div class="product">
+            <img src="img/chicken and fries.jpg">
+            <h3>Chicken and Fries</h3>
+            <p class="ingredients">Combination Of Chicken Bites And Crispy Fries With Sriracha And Melted Cheese</p>
+            <p class="price">₱190.00</p>
+            <p class="stars">★★★★☆</p>
+        </div>
+
+        <div class="product">
+            <img src="img/aglio olio.jpg">
+            <h3>Aglio Olio</h3>
+            <p class="ingredients">Oil Based Pasta With Garlic, Parsley And Olive Oil</p>
+            <p class="price">₱170.00</p>
+            <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+        document.querySelector('.search-bar input').addEventListener('input', function () {
+            const searchTerm = this.value.toLowerCase();
+            const products = document.querySelectorAll('.product');
+        
+            products.forEach(product => {
+                const productName = product.querySelector('h3').textContent.toLowerCase();
+                if (productName.includes(searchTerm)) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
